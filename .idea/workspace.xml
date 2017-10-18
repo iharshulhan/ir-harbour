@@ -2,9 +2,474 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="54d34b31-ce94-485f-9021-80957ebd4324" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search_backend/__init__.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.py" afterPath="$PROJECT_DIR$/app.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/about.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/bugs.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/abstract.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/allocation.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/apiabiversion.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/arg.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/bool.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/buffer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/bytearray.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/bytes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/capsule.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/cell.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/code.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/codec.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/complex.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/concrete.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/conversion.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/coro.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/datetime.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/descriptor.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/dict.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/exceptions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/file.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/float.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/function.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/gcsupport.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/gen.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/import.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/init.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/intro.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/iter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/iterator.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/list.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/long.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/mapping.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/marshal.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/memory.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/memoryview.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/method.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/module.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/none.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/number.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/objbuffer.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/object.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/objimpl.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/refcounting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/reflection.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/sequence.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/set.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/slice.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/stable.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/structures.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/sys.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/tuple.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/type.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/typeobj.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/unicode.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/utilities.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/veryhigh.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/c-api/weakref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/contents.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/copyright.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distributing/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/apiref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/builtdist.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/commandref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/configfile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/examples.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/extending.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/introduction.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/packageindex.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/setupscript.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/sourcedist.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/distutils/uploading.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/building.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/embedding.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/extending.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/newtypes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/extending/windows.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/design.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/extending.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/general.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/gui.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/installed.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/library.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/programming.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/faq/windows.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/glossary.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/argparse.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/clinic.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/cporting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/curses.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/descriptor.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/functional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/instrumentation.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/ipaddress.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/logging-cookbook.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/logging.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/pyporting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/regex.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/sockets.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/sorting.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/unicode.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/howto/urllib2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/install/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/installing/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/2to3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/__future__.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/__main__.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/_dummy_thread.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/_thread.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/abc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/aifc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/allos.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/archiving.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/argparse.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/array.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ast.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asynchat.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-dev.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-eventloop.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-eventloops.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-protocol.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-queue.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-stream.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-subprocess.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-sync.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio-task.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncio.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/asyncore.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/atexit.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/audioop.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/base64.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/bdb.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/binary.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/binascii.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/binhex.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/bisect.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/builtins.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/bz2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/calendar.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/cgi.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/cgitb.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/chunk.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/cmath.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/cmd.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/code.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/codecs.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/codeop.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/collections.abc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/collections.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/colorsys.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/compileall.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/concurrency.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/concurrent.futures.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/concurrent.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/configparser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/constants.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/contextlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/copy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/copyreg.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/crypt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/crypto.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/csv.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ctypes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/curses.ascii.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/curses.panel.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/curses.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/custominterp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/datatypes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/datetime.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/dbm.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/debug.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/decimal.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/development.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/difflib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/dis.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/distribution.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/distutils.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/doctest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/dummy_threading.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.charset.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.compat32-message.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.contentmanager.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.encoders.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.errors.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.examples.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.generator.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.header.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.headerregistry.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.iterators.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.message.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.mime.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.parser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.policy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/email.util.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ensurepip.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/enum.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/errno.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/exceptions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/faulthandler.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fcntl.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/filecmp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fileformats.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fileinput.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/filesys.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fnmatch.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/formatter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fpectl.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/fractions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/frameworks.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ftplib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/functional.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/functions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/functools.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/gc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/getopt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/getpass.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/gettext.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/glob.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/grp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/gzip.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/hashlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/heapq.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/hmac.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/html.entities.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/html.parser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/html.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/http.client.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/http.cookiejar.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/http.cookies.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/http.server.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/http.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/i18n.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/idle.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/imaplib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/imghdr.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/imp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/importlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/inspect.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/internet.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/intro.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/io.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ipaddress.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ipc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/itertools.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/json.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/keyword.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/language.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/linecache.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/locale.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/logging.config.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/logging.handlers.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/logging.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/lzma.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/macpath.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/mailbox.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/mailcap.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/markup.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/marshal.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/math.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/mimetypes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/misc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/mm.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/mmap.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/modulefinder.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/modules.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/msilib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/msvcrt.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/multiprocessing.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/netdata.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/netrc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/nis.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/nntplib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/numbers.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/numeric.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/operator.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/optparse.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/os.path.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/os.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ossaudiodev.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/othergui.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/parser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pathlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pdb.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/persistence.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pickle.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pickletools.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pipes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pkgutil.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/platform.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/plistlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/poplib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/posix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pprint.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/profile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pty.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pwd.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/py_compile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pyclbr.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pydoc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/pyexpat.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/python.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/queue.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/quopri.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/random.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/re.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/readline.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/reprlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/resource.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/rlcompleter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/runpy.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sched.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/secrets.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/select.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/selectors.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/shelve.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/shlex.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/shutil.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/signal.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/site.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/smtpd.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/smtplib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sndhdr.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/socket.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/socketserver.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/spwd.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sqlite3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/ssl.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/stat.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/statistics.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/stdtypes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/string.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/stringprep.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/struct.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/subprocess.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sunau.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/superseded.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/symbol.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/symtable.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sys.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/sysconfig.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/syslog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tabnanny.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tarfile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/telnetlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tempfile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/termios.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/test.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/text.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/textwrap.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/threading.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/time.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/timeit.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tk.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tkinter.scrolledtext.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tkinter.tix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tkinter.ttk.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tkinter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/token.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tokenize.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/trace.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/traceback.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tracemalloc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/tty.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/turtle.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/types.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/typing.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/undoc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/unicodedata.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/unittest.mock-examples.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/unittest.mock.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/unittest.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/unix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/urllib.error.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/urllib.parse.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/urllib.request.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/urllib.robotparser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/urllib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/uu.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/uuid.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/venv.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/warnings.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/wave.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/weakref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/webbrowser.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/windows.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/winreg.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/winsound.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/wsgiref.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xdrlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.dom.minidom.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.dom.pulldom.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.dom.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.etree.elementtree.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.sax.handler.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.sax.reader.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.sax.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.sax.utils.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xml.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xmlrpc.client.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xmlrpc.server.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/xmlrpc.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/zipapp.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/zipfile.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/zipimport.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/library/zlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/license.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/compound_stmts.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/datamodel.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/executionmodel.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/expressions.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/grammar.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/import.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/introduction.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/lexical_analysis.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/simple_stmts.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/reference/toplevel_components.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/appendix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/appetite.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/classes.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/controlflow.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/datastructures.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/errors.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/floatingpoint.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/inputoutput.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/interactive.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/interpreter.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/introduction.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/modules.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/stdlib.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/stdlib2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/venv.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/tutorial/whatnow.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/using/cmdline.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/using/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/using/mac.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/using/unix.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/using/windows.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.0.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.6.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/2.7.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.0.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.1.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.2.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.3.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.4.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.5.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/3.6.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/changelog.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/python-3.6.3-docs-text/whatsnew/index.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search_backend/process_documents.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/search_backend/read_files.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,14 +478,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/ir_harbour$ir_harbour.coverage" NAME="ir-harbour Coverage Results" MODIFIED="1508314273503" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ir_harbour$read_files.coverage" NAME="read_files Coverage Results" MODIFIED="1508314441269" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/search_backend" />
+    <SUITE FILE_PATH="coverage/ir_harbour$process_documents.coverage" NAME="process_documents Coverage Results" MODIFIED="1508321878576" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/search_backend" />
+  </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="app.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#65#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="gui.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python-3.6.3-docs-text/faq/gui.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -39,9 +521,43 @@
       <file leaf-file-name="__init__.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/search_backend/__init__.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+            <state relative-caret-position="30">
+              <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process_documents.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/search_backend/process_documents.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="272">
+              <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#17#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="copyright.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/python-3.6.3-docs-text/copyright.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="read_files.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/search_backend/read_files.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#9#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -57,6 +573,8 @@
         <option value="$PROJECT_DIR$/app.py" />
         <option value="$PROJECT_DIR$/templates/index.html" />
         <option value="$PROJECT_DIR$/search_backend/__init__.py" />
+        <option value="$PROJECT_DIR$/search_backend/read_files.py" />
+        <option value="$PROJECT_DIR$/search_backend/process_documents.py" />
       </list>
     </option>
   </component>
@@ -69,7 +587,7 @@
   <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="708" />
+    <option name="height" value="714" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -100,6 +618,34 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ir-harbour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ir-harbour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="search_backend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ir-harbour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ir-harbour" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python-3.6.3-docs-text" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -108,6 +654,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -121,7 +672,45 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ir-harbour">
+  <component name="RunManager" selected="Python.process_documents">
+    <configuration default="false" name="read_files" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search_backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ir-harbour" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search_backend/read_files.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="false" name="process_documents" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/search_backend" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ir-harbour" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/search_backend/process_documents.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -283,9 +872,17 @@
       <option name="EMULATE_TERMINAL" value="false" />
       <method />
     </configuration>
-    <list size="1">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Python.ir-harbour" />
+      <item index="1" class="java.lang.String" itemvalue="Python.read_files" />
+      <item index="2" class="java.lang.String" itemvalue="Python.process_documents" />
     </list>
+    <recent_temporary>
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.process_documents" />
+        <item index="1" class="java.lang.String" itemvalue="Python.read_files" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -301,14 +898,14 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="708" extended-state="6" />
+    <frame x="0" y="23" width="1280" height="714" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.10823909" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34244373" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -332,15 +929,43 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/search_backend/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" lean-forward="true" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python-3.6.3-docs-text/faq/gui.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/python-3.6.3-docs-text/copyright.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="37" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_backend/read_files.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -354,9 +979,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="15" selection-end-line="1" selection-end-column="15" />
-          <folding />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/search_backend/process_documents.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#17#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
