@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from process_documents import index_files
+import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
@@ -25,7 +26,7 @@ def search(query_string):
     docs = queryOr(tokens)
     documents = read_files.crawl_files()
 
-    for key, value in sorted(docs.iteritems(), key=lambda (k, v): (v, k)):
+    for key, value in sorted(docs.iteritems(), key=lambda kv: (-kv[1], kv[0])):
         result_list.append({
             'title': documents[key]['name'],
             'snippet': documents[key]['doc'][0:150],
