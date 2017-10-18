@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 
 from process_documents import index_files
-import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
@@ -13,6 +12,7 @@ stopwords = set(stopwords.words('english'))
 stemmer = EnglishStemmer()
 index = index_files()
 
+
 def search(query_string):
     result_list = []
 
@@ -23,7 +23,7 @@ def search(query_string):
         if token in stopwords:
             continue
         tokens.append(stemmer.stem(token))
-    docs = queryOr(tokens)
+    docs = query_or(tokens)
     documents = read_files.crawl_files()
 
     for key, value in sorted(docs.iteritems(), key=lambda kv: (-kv[1], kv[0])):
@@ -36,7 +36,7 @@ def search(query_string):
     return result_list
 
 
-def queryOr(tokens):
+def query_or(tokens):
     docs = defaultdict(int)
     for doc in index[tokens[0]]:
         docs[doc] = 0
@@ -51,6 +51,3 @@ def queryOr(tokens):
 
         docs = new_docs.copy()
     return docs
-
-
-print search('Python is garbage')
