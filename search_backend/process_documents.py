@@ -17,7 +17,6 @@ def index_files():
         doc = file['doc'].decode('utf-8')
         for start, end in tokenizer.span_tokenize(doc):
             token = doc[start:end].lower()
-            print (token, start, end)
             if token in stopwords:
                 continue
             token = stemmer.stem(token)
