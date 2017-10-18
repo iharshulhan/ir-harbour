@@ -3,6 +3,8 @@ from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
 from collections import defaultdict
+import nltk
+nltk.download('stopwords')
 
 tokenizer = RegexpTokenizer(r'\w+')
 stopwords = set(stopwords.words('english'))

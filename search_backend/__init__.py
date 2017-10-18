@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
-
 from search_backend.process_documents import index_files
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
 from collections import defaultdict
 import search_backend.read_files
+import nltk
+nltk.download('stopwords')
+
 tokenizer = RegexpTokenizer(r'\w+')
 
 
