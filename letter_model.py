@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 import itertools
-import search_backend.read_files as read_files
 from nltk.tokenize import RegexpTokenizer
 from collections import defaultdict
 

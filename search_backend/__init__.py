@@ -1,11 +1,15 @@
 # -*- coding: utf-8 -*-
-from search_backend.process_documents import index_files
+"""This module performs search on index"""
+
+
+import nltk
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
 from collections import defaultdict
+from search_backend.process_documents import index_files
 import search_backend.read_files as read_files
-import nltk
+
 nltk.download('stopwords')
 
 tokenizer = RegexpTokenizer(r'\w+')
@@ -27,6 +31,12 @@ class Search:
             if token in self.stopwords:
                 continue
             tokens.append(self.stemmer.stem(token))
+        if (len(tokens) == 0):
+            return ([{
+            'title': 'No meaningful words provided',
+                     'snippet': '',
+                                'href': 'http://www.example.com'
+            }])
         docs, positions = self.query_phrase(tokens, 1)
         documents = read_files.crawl_files()
         if len(docs) > 0:

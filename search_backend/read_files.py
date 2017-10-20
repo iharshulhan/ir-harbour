@@ -1,5 +1,6 @@
+"""This module reads files from disk"""
+
 import os
-import fnmatch
 
 
 def crawl_files():

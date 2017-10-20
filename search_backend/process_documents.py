@@ -1,3 +1,5 @@
+"""This module indexes files"""
+
 import search_backend.read_files as read_files
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
