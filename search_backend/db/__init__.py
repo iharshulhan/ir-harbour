@@ -1,0 +1,1 @@
+from search_backend.db.schemas import *

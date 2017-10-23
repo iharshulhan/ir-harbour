@@ -101,3 +101,11 @@ ENV/
 
 # mypy
 .mypy_cache/
+enwiki-20171020-pages-articles.xml.bz2
+enwiki-20171020-pages-articles1.xml-p10p30302.bz2
+enwiki-20171020-pages-meta-current2.xml-p30304p88444.bz2
+enwiki-20171020-pages-meta-current3.xml-p88445p200507.bz2
+enwiki-20171020-pages-meta-current4.xml-p200511p352689.bz2
+search_backend/keywords/
+search_backend/summaries/
+MSLR-WEB10K.zip

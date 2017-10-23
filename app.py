@@ -6,9 +6,16 @@ import nltk
 from search_backend import Search
 
 
-nltk.download('stopwords')
-app = Flask(__name__)
+def setup_environment():
+    """Download required resources."""
+    nltk.download('stopwords')
+    nltk.download('punkt')
+    nltk.download('averaged_perceptron_tagger')
+    print('Completed resource downloads.')
 
+
+app = Flask(__name__)
+setup_environment()
 
 @app.route("/")
 def root():
@@ -25,7 +32,7 @@ def search():
     if not json or json.get('query') is None:
         abort(400)
 
-    query = str(json['query']).strip()
+    query = json['query'].strip()
 
     return jsonify(
         results=search_global.search(query)
@@ -40,7 +47,7 @@ def spell_check():
     if not json or json.get('query') is None:
         abort(400)
 
-    query = str(json['query']).strip()
+    query = json['query'].strip()
     return jsonify(
         results=spell(query)
     )
