@@ -2,6 +2,7 @@ pony
 autocorrect
 psycopg2
 networkx
+gensim
 Flask==0.12.2
 Jinja2==2.9.6
 gunicorn==19.4.5

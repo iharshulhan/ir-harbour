@@ -166,6 +166,6 @@ second = 'Second book'
 build_model_words(spanish2, german2, 'spanish_book.txt', 'spanish_book_2.txt')
 predict_text_by_words(u'seria caer en la mayor de ellas: la y el buen sentido no deben', spanish2, german2, number_of_grams)
 
-print correct_spelling_by_words(u'seugía', spanish2, german2, number_of_grams)
+print(correct_spelling_by_words(u'seugía', spanish2, german2, number_of_grams))
 
 

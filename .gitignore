@@ -109,3 +109,6 @@ enwiki-20171020-pages-meta-current4.xml-p200511p352689.bz2
 search_backend/keywords/
 search_backend/summaries/
 MSLR-WEB10K.zip
+.DS_Store
+GoogleNews-vectors-negative300.bin
+GoogleNews-vectors-negative300.bin.zip

@@ -14,25 +14,7 @@
     <title>Yoctle: a tiny web search engine</title>
 
     <script>
-        $(function(){
-            $("#inputQuery").on('input change paste', function(){
-                console.log('loh');
-                $.ajax({
-                    type: "POST",
-                    url: "{{ url_for('spell_check') }}",
-                    contentType: "application/json",
-                    dataType: "json",
-                    data: JSON.stringify({
-                        query: $('input[name="q"]').val()
-                    })
-                }).done(function (response) {
-                    $('div.input-suggestion').html("Spelling suggestion: " +
-                        "<p id='spelling' style='display: inline'>" + response.results + "</p>");
-                });
-            });
-            $(document).on('click', 'div.input-suggestion', function(){
-                $('input[name="q"]').val($("#spelling").text())
-            });
+        $(function() {
             $('form[role="search"]').on('submit', function(){
                 $.ajax({
                     type: "POST",
@@ -85,7 +67,6 @@
                         <input id="inputQuery" class="form-control" type="text" name="q" placeholder="Search">
                         <span class="input-group-btn"><button class="btn btn-outline-secondary" type="submit"><i class="fa fa-search"></i></button></span>
                     </div>
-                    <div class="input-suggestion">Spelling suggestion: <p style="display: inline"></p></div>
                 </div>
             </form>
         </div>

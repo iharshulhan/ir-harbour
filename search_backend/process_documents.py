@@ -22,7 +22,7 @@ def index_files():
         doc = io.open(doc_path, encoding="utf-8").read()
         document_instance = Document.get(location=doc_path)
         if document_instance is None:
-            document_instance = Document(location=doc_path)
+            document_instance = Document(location=doc_path, snippet=text_rank.summarize(doc_path))
 
             for start, end in tokenizer.span_tokenize(doc):
                 token = doc[start:end].lower()
@@ -32,7 +32,8 @@ def index_files():
                 index_token = Index.get(key=token)
                 if index_token is None:
                     index_token = Index(key=token)
-                document_position = DocumentPosition(document=document_instance, position=start, index=index_token)
+                document_index = DocumentIndex(document=document_instance, index=index_token)
+                document_index_position = DocumentIndexPosition(documentIndex=document_index, position=start)
 
         query_stats = sorted(db.local_stats.values(),
                              reverse=True, key=attrgetter('sum_time'))

@@ -5,6 +5,12 @@ import nltk
 import os
 from nltk.corpus import wordnet as wn
 from nltk import word_tokenize, pos_tag
+import gensim
+
+# load the google word2vec model
+# filename = '../GoogleNews-vectors-negative300.bin' slow
+# model = KeyedVectors.load_word2vec_format(filename, binary=True)
+# calculate: (king - man) + woman = ?
 
 def penn_to_wn(tag):
     """ Convert between a Penn Treebank tag to a simplified Wordnet tag """
@@ -138,6 +144,6 @@ def extract_sentences(text, summary_length=100, clean_sentences=False, language=
 def summarize(doc_name):
     file_text = io.open(doc_name, encoding="utf-8")
     text = file_text.read()
-    summary = extract_sentences(text)
+    # summary = extract_sentences(text)
+    summary = gensim.summarization.summarize(text, word_count=40)
     return summary
-

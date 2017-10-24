@@ -14,7 +14,7 @@ def setup_environment():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     print('Completed resource downloads.')
-    index_files()
+    # index_files()
 
 
 app = Flask(__name__)
@@ -38,20 +38,6 @@ def search():
 
     return jsonify(
         results=search_global.search(query)
-    )
-
-
-@app.route('/spellCheck', methods=["POST"])
-def spell_check():
-
-    json = request.get_json()
-
-    if not json or json.get('query') is None:
-        abort(400)
-
-    query = json['query'].strip()
-    return jsonify(
-        results=spell(query)
     )
 
 if __name__ == "__main__":
