@@ -5,24 +5,20 @@ db = Database(provider='postgres', user='postgres', password='postgres', host='l
 
 class Index(db.Entity):
     key = Required(str, index=True, unique=True)
-    documents = Set('DocumentIndex', index=True)
+    documents = Set('DocumentPosition', index=True)
 
 
 class Document(db.Entity):
     snippet = Optional(str)
     location = Required(str, index=True, unique=True)
-    documentIndexes = Set('DocumentIndex', index=True)
+    documentPositions = Set('DocumentPosition', index=True)
 
 
-class DocumentIndex(db.Entity):
+class DocumentPosition(db.Entity):
     document = Required('Document', index=True)
-    index = Required('Index', index=True)
-    positions = Set('DocumentIndexPosition', index=True)
-
-
-class DocumentIndexPosition(db.Entity):
     position = Required(int)
-    documentIndex = Required('DocumentIndex', index=True)
+    index = Optional('Index', index=True)
+    composite_index
 
 
 db.generate_mapping(create_tables=True, check_tables=True)

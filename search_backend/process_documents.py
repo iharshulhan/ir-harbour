@@ -32,8 +32,7 @@ def index_files():
                 index_token = Index.get(key=token)
                 if index_token is None:
                     index_token = Index(key=token)
-                document_index = DocumentIndex(document=document_instance, index=index_token)
-                document_index_position = DocumentIndexPosition(documentIndex=document_index, position=start)
+                document_position = DocumentPosition(document=document_instance, position=start, index=index_token)
 
         query_stats = sorted(db.local_stats.values(),
                              reverse=True, key=attrgetter('sum_time'))
