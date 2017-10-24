@@ -1,12 +1,4 @@
 # iRnWs
 Information Retrieval &amp; Web Search
 
-[![Build Status](https://travis-ci.org/iharshulhan/ir-harbour.svg?branch=master)](https://travis-ci.org/iharshulhan/ir-harbour)
-
-```bash
-sudo apt-get install ruby1.9.1-dev
-sudo gem install travis -v 1.8.8 --no-rdoc --no-ri
-wget -qO- https://cli-assets.heroku.com/install-ubuntu.sh | sh
-heroku auth:login
-travis encrypt $(heroku auth:token) --add deploy.api_key
-```
+Access on http://35.184.251.146:5000

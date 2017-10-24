@@ -4,14 +4,17 @@ from flask import Flask, render_template, jsonify, abort, request
 from autocorrect import spell
 import nltk
 from search_backend import Search
+from search_backend.process_documents import index_files
 
 
 def setup_environment():
     """Download required resources."""
+
     nltk.download('stopwords')
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     print('Completed resource downloads.')
+    index_files()
 
 
 app = Flask(__name__)
@@ -22,7 +25,6 @@ def root():
     return render_template('index.html')
 
 search_global = Search()
-index = 'sdf'
 
 
 @app.route('/search', methods=["POST"])
