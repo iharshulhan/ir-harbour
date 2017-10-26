@@ -22,6 +22,7 @@ def index_files():
         doc = io.open(doc_path, encoding="utf-8").read()
         document_instance = Document.get(location=doc_path)
         if document_instance is None:
+            print(doc_path)
             document_instance = Document(location=doc_path, snippet=text_rank.summarize(doc_path))
 
             for start, end in tokenizer.span_tokenize(doc):
@@ -38,5 +39,6 @@ def index_files():
                              reverse=True, key=attrgetter('sum_time'))
         for qs in query_stats:
             print(qs.sum_time, qs.db_count, qs.sql)
+        commit()
 
 

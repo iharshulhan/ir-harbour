@@ -1,4 +1,4 @@
-.idea/
+.idea/*
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -112,3 +112,15 @@ MSLR-WEB10K.zip
 .DS_Store
 GoogleNews-vectors-negative300.bin
 GoogleNews-vectors-negative300.bin.zip
+data/*
+search_backend/AdaBoost
+search_backend/BaggingClassifier
+search_backend/DecisionTree
+search_backend/GradientBoostingClassifier
+search_backend/MLPClassifier
+search_backend/RandomForest
+search_backend/classifier_small
+search_backend/data.txt
+search_backend/data2.txt
+search_backend/data3.txt
+search_backend/mycache/
