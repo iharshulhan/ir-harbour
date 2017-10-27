@@ -18,7 +18,7 @@ data = get_data('train.txt')
 new_data = [[], []]
 fl = [0, 0, 0, 0, 0]
 features_to_skip = []
-amount = 30000
+amount = 60000
 
 for i in range(5):
     for j in range(len(data[i * 2 + 1])):
@@ -38,5 +38,5 @@ for i in range(5):
             break
 
 new_data[0], new_data[1] = shuffle(new_data[0], new_data[1], random_state=0)
-np.save('data4.txt', new_data)
+np.save('data5', new_data)
 

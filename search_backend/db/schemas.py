@@ -18,7 +18,7 @@ class DocumentPosition(db.Entity):
     document = Required('Document', index=True)
     position = Required(int)
     index = Optional('Index', index=True)
-    composite_index
+    composite_index(document, index)
 
 
 db.generate_mapping(create_tables=True, check_tables=True)

@@ -124,3 +124,5 @@ search_backend/data.txt
 search_backend/data2.txt
 search_backend/data3.txt
 search_backend/mycache/
+search_backend/data4.txt.npy
+search_backend/data5.npy

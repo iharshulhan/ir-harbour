@@ -25,7 +25,12 @@ def execute():
     #     data = load_svmlight_files(("../data/Fold1/train.txt", "../data/Fold1/test.txt"))
     #     return data
 
-    X, y = joblib.load('data3.txt')
+    X, old_y = np.load('data5.npy')
+    y = []
+    for i in old_y:
+        y.append(int(i))
+    X = np.array([np.array(xi) for xi in X])
+    y = np.array(y)
     print('Started')
 
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
@@ -39,13 +44,7 @@ def execute():
     seed = 7
     # prepare models
 
-    models = []
-    models.append(('RandomForest', RandomForestClassifier(n_estimators=50, criterion='entropy', random_state=seed)))
-    models.append(('MLPClassifier', MLPClassifier()))
-    models.append(('GradientBoostingClassifier', GradientBoostingClassifier(n_estimators=50, random_state=seed)))
-    models.append(('AdaBoost', AdaBoostClassifier(DecisionTreeClassifier(max_depth=5),
-                                                  algorithm="SAMME",
-                                                  n_estimators=50)))
+    models = [('RandomForest', RandomForestClassifier(n_estimators=300, criterion='entropy', random_state=seed))]
 
     # evaluate each model in turn
     results = []
