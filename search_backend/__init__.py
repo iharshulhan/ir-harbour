@@ -87,9 +87,6 @@ def test_start():
     features_for_doc(['python', 'good'], Index.get(key='good').documents.page(1, pagesize=1)[0].document)
 
 
-test_start()
-
-
 @db_session
 def check_doc(token, doc):
     len_doc = count(Index.get(key=token).documents
