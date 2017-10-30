@@ -1,4 +1,7 @@
 """This module indexes files"""
+import math
+from collections import defaultdict
+
 from search_backend.db.schemas import *
 import io
 from nltk.tokenize import RegexpTokenizer
@@ -12,6 +15,14 @@ import search_backend.text_rank as text_rank
 tokenizer = RegexpTokenizer(r'\w+')
 stopwords = set(stopwords.words('english'))
 stemmer = EnglishStemmer()
+
+
+def tf(num):
+    return 1 + math.log(num)
+
+
+def idf(num_docs, term_num):
+    return math.log(num_docs / (1 + term_num))
 
 
 @db_session
@@ -35,10 +46,24 @@ def index_files():
                     index_token = Index(key=token)
                 document_position = DocumentPosition(document=document_instance, position=start, index=index_token)
 
+        if document_instance.len is None:
+            num = 0
+            dic = defaultdict(int)
+            for start, end in tokenizer.span_tokenize(doc):
+                token = doc[start:end].lower()
+                if token in stopwords:
+                    continue
+                token = stemmer.stem(token)
+                num += 1
+                if token not in dic:
+                    dic[token] = 0
+                dic[token] += 1
+
+            document_instance.len = num
+
         query_stats = sorted(db.local_stats.values(),
                              reverse=True, key=attrgetter('sum_time'))
         for qs in query_stats:
             print(qs.sum_time, qs.db_count, qs.sql)
         commit()
-
 

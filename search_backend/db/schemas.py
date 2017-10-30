@@ -12,6 +12,7 @@ class Document(db.Entity):
     snippet = Optional(str)
     location = Required(str, index=True, unique=True)
     documentPositions = Set('DocumentPosition', index=True)
+    len = Required(int)
 
 
 class DocumentPosition(db.Entity):
@@ -21,5 +22,5 @@ class DocumentPosition(db.Entity):
     composite_index(document, index)
 
 
-db.generate_mapping(create_tables=True, check_tables=True)
+db.generate_mapping(create_tables=True)
 

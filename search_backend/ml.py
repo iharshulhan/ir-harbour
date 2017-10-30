@@ -36,9 +36,9 @@ def execute():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
     # print(X_train[0:1, 0], y_train[0])
     # Feature Scaling
-    from sklearn.preprocessing import StandardScaler
+    from sklearn.preprocessing import MinMaxScaler
 
-    sc = StandardScaler()
+    sc = MinMaxScaler()
     X_train = sc.fit_transform(X_train)
     X_test = sc.transform(X_test)
     seed = 7
