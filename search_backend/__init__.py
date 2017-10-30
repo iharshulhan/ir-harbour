@@ -12,6 +12,8 @@ import search_backend.read_files as read_files
 import search_backend.text_rank as text_rank
 from operator import attrgetter
 from joblib import Parallel, delayed
+import math
+import statistics
 
 tokenizer = RegexpTokenizer(r'\w+')
 
@@ -19,9 +21,57 @@ docs = defaultdict(int)
 docs_num = defaultdict(int)
 
 
+def tf(num):
+    return 1 + math.log(num)
+
+
+def idf(num_docs, term_num):
+    return math.log(num_docs / (1 + term_num))
+
+
 @db_session
-def check_doc(token, doc, index):
-    len_doc = count(index.get(key=token).documents
+def features_for_doc(tokens, doc):
+    covered_query_term_number = 0
+    sum_idf = 0
+    tfs = []
+    tfs_stream = []
+    tf_idfs = []
+    stream_length = 10  # doc.length
+    for token in tokens:
+        len_doc = len(Index.get(key=token).documents.filter(lambda doc_position: doc_position.document == doc))
+        covered_query_term_number += len_doc > 0
+        current_idf = idf(len(Document.select()), count(i.documents.document for i in Index if i.key == token))
+        sum_idf += current_idf
+        tfs.append(tf(len_doc))
+        tfs_stream.append(len_doc / stream_length)
+        tf_idfs.append(current_idf * tf(len_doc))
+
+    covered_query_term_ratio = covered_query_term_number / len(tokens)
+
+    features = [covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
+                max(tfs), statistics.mean(tfs), statistics.variance(tfs), sum(tfs_stream), min(tfs_stream),
+                max(tfs_stream), statistics.mean(tfs_stream), statistics.variance(tfs_stream), sum(tf_idfs),
+                min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), statistics.variance(tf_idfs)]
+
+    print(features)
+
+    # query_stats = sorted(db.local_stats.values(),
+    #                      reverse=True, key=attrgetter('sum_time'))
+    # for qs in query_stats:
+    #     print(qs.sum_time, qs.db_count, qs.sql)
+
+
+@db_session
+def test_start():
+    features_for_doc(['python', 'good'], Index.get(key='good').documents.page(1, pagesize=1)[0].document)
+
+
+test_start()
+
+
+@db_session
+def check_doc(token, doc):
+    len_doc = count(Index.get(key=token).documents
                     .filter(lambda doc_position: doc_position.document.id == doc))
     if len_doc > 0:
         docs[doc] = docs[doc] + 1
@@ -34,7 +84,7 @@ result_docs_position = defaultdict(int)
 
 
 @db_session
-def find_exact_phrase(doc, tokens, distance, index):
+def find_exact_phrase(doc, tokens, distance):
     token_num = 0
     token_index = []
     for i in range(len(tokens)):
@@ -44,7 +94,7 @@ def find_exact_phrase(doc, tokens, distance, index):
         current_index = lambda: token_index[token_num]
 
         def docs(token_number):
-            return index.get(key=tokens[token_number]).documents \
+            return Index.get(key=tokens[token_number]).documents \
                        .filter(lambda doc_position: doc_position.document.id == doc)[:]
 
         if token_num == len(tokens) - 1:
@@ -137,7 +187,8 @@ class Search:
         for doc in Index.get(key=min_token).documents:
             docs[doc.document.id] = 0
         for token in tokens:
-            Parallel(n_jobs=8, backend="threading")(delayed(check_doc)(token=token, doc=doc, index=Index) for doc in docs)
+            Parallel(n_jobs=8, backend="threading")(
+                delayed(check_doc)(token=token, doc=doc, index=Index) for doc in docs)
         for (k, v) in docs.items():
             if v == len(tokens):
                 result_docs[k] = docs_num[k]

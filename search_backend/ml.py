@@ -25,7 +25,7 @@ def execute():
     #     data = load_svmlight_files(("../data/Fold1/train.txt", "../data/Fold1/test.txt"))
     #     return data
 
-    X, old_y = np.load('data5.npy')
+    X, old_y = np.load('data7_only_whole_doc.npy')
     y = []
     for i in old_y:
         y.append(int(i))
@@ -36,15 +36,17 @@ def execute():
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=0)
     # print(X_train[0:1, 0], y_train[0])
     # Feature Scaling
-    from sklearn.preprocessing import Normalizer
+    from sklearn.preprocessing import StandardScaler
 
-    sc = Normalizer()
+    sc = StandardScaler()
     X_train = sc.fit_transform(X_train)
     X_test = sc.transform(X_test)
     seed = 7
     # prepare models
 
-    models = [('RandomForest', RandomForestClassifier(n_estimators=300, criterion='entropy', random_state=seed))]
+    models = [
+               ('RandomForest90', RandomForestClassifier(n_estimators=90, criterion='entropy', random_state=seed)),
+            ]
 
     # evaluate each model in turn
     results = []
