@@ -1,15 +1,11 @@
 """This module indexes files"""
 import math
 import os
-from collections import defaultdict
 
 from search_backend.db.schemas import *
-import io
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
 from nltk.corpus import stopwords
-from operator import attrgetter
-import search_backend.read_files as read_files
 import search_backend.text_rank as text_rank
 import bz2
 import xml.etree.ElementTree as ET
@@ -72,18 +68,17 @@ def index_files():
                 document_position = DocumentPosition(document=document_instance, position=start, index=index_token)
         if document_instance.len is None:
             num = 0
-            dic = defaultdict(int)
             for start, end in tokenizer.span_tokenize(doc):
                 token = doc[start:end].lower()
                 if token in stopwords:
                     continue
-                token = stemmer.stem(token)
                 num += 1
-                if token not in dic:
-                    dic[token] = 0
-                dic[token] += 1
 
             document_instance.len = num
+            from pympler import summary, muppy
+            sum1 = summary.summarize(muppy.get_objects())
+            summary.print_(sum1)
+
 
         # query_stats = sorted(db.local_stats.values(),
         #                      reverse=True, key=attrgetter('sum_time'))

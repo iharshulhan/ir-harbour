@@ -1,4 +1,6 @@
 from pony.orm import *
+# from psycogreen.gevent import patch_psycopg
+# patch_psycopg()
 
 db = Database(provider='postgres', user='postgres', password='postgres', host='localhost', database='postgres')
 
