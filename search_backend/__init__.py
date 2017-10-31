@@ -64,10 +64,16 @@ def features_for_doc(tokens, doc):
 
     covered_query_term_ratio = covered_query_term_number / len(tokens)
 
-    features = [covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
-                max(tfs), statistics.mean(tfs), statistics.variance(tfs), sum(tfs_stream), min(tfs_stream),
-                max(tfs_stream), statistics.mean(tfs_stream), statistics.variance(tfs_stream), sum(tf_idfs),
-                min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), statistics.variance(tf_idfs)]
+    if len(tokens) == 1:
+        features = [covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
+                    max(tfs), statistics.mean(tfs), 0, sum(tfs_stream), min(tfs_stream),
+                    max(tfs_stream), statistics.mean(tfs_stream), 0, sum(tf_idfs),
+                    min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), 0]
+    else:
+        features = [covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
+                    max(tfs), statistics.mean(tfs), statistics.variance(tfs), sum(tfs_stream), min(tfs_stream),
+                    max(tfs_stream), statistics.mean(tfs_stream), statistics.variance(tfs_stream), sum(tf_idfs),
+                    min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), statistics.variance(tf_idfs)]
 
     v1 = np.array(tfs_all_tokens_query)
     length_arr = select((dp.index, count(dp.position)) for dp in DocumentPosition if dp.document == doc)
@@ -176,6 +182,7 @@ class Search:
         if len(docs) > 0:
             for key, value in sorted(docs.items(), key=lambda kv: (-kv[1], kv[0])):
                 document = Document.get(id=key)
+                print(value, document.location)
                 summary = document.snippet
                 result_list.append({
                     'title': document.location,
@@ -211,6 +218,10 @@ class Search:
             if v == len(tokens):
                 prob = model.predict_proba([features_for_doc(tokens, Document.get(id=k))])
                 result_docs[k] = prob[0][1] - prob[0][0]
+        query_stats = sorted(db.global_stats.values(),
+                             reverse=True, key=attrgetter('sum_time'))
+        for qs in query_stats:
+            print(qs.sum_time, qs.db_count, qs.sql)
         return result_docs
 
     @db_session

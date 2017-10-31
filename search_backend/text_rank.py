@@ -141,9 +141,7 @@ def extract_sentences(text, summary_length=100, clean_sentences=False, language=
     return summary
 
 
-def summarize(doc_name):
-    file_text = io.open(doc_name, encoding="utf-8")
-    text = file_text.read()
+def summarize(text):
     # summary = extract_sentences(text)
-    summary = gensim.summarization.summarize(text, word_count=40)
+    summary = gensim.summarization.summarize(text, ratio=0.01, word_count=200)
     return summary

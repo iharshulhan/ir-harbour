@@ -14,7 +14,7 @@ def setup_environment():
     nltk.download('punkt')
     nltk.download('averaged_perceptron_tagger')
     print('Completed resource downloads.')
-    index_files()
+    # index_files()
 
 
 app = Flask(__name__)

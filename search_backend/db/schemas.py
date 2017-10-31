@@ -12,7 +12,7 @@ class Document(db.Entity):
     snippet = Optional(str)
     location = Required(str, index=True, unique=True)
     documentPositions = Set('DocumentPosition', index=True)
-    len = Required(int)
+    len = Optional(int)
 
 
 class DocumentPosition(db.Entity):
