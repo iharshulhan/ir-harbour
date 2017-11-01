@@ -28,6 +28,10 @@ for i in range(5):
                 if k > 104 or k % 5 != 4:
                     continue
                 new_data[0][len(new_data[0]) - 1].append(data[i * 2][j, k])
+            for k in range(136):
+                if k > 104 or k % 5 != 2:
+                    continue
+                new_data[0][len(new_data[0]) - 1].append(data[i * 2][j, k])
             if data[i * 2 + 1][j] < 2:
                 new_data[1].append(0)
                 fl[int(data[i * 2 + 1][j])] += 1
@@ -38,5 +42,5 @@ for i in range(5):
             break
 
 new_data[0], new_data[1] = shuffle(new_data[0], new_data[1], random_state=0)
-np.save('data7_only_whole_doc', new_data)
+np.save('data9_doc_title', new_data)
 

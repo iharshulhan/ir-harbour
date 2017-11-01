@@ -7,7 +7,7 @@ import sklearn.externals.joblib as joblib
 from search_backend.db.schemas import *
 from nltk.tokenize import RegexpTokenizer
 from nltk.stem.snowball import EnglishStemmer
-from nltk.corpus import stopwords
+from nltk.corpus import stopwords as stopwordsi
 from collections import defaultdict
 from search_backend.process_documents import index_files
 import search_backend.read_files as read_files
@@ -19,9 +19,11 @@ import statistics
 import numpy as np
 
 tokenizer = RegexpTokenizer(r'\w+')
+stopwords = set(stopwordsi.words('english'))
+stemmer = EnglishStemmer()
 
 dir = os.path.dirname(__file__)
-model = joblib.load((dir + '/RandomForest90'))
+model = joblib.load((dir + '/RandomForest90_doc_title'))
 
 
 def tf(num):
@@ -32,23 +34,20 @@ def idf(num_docs, term_num):
     return math.log(num_docs / (1 + term_num))
 
 
-def vector_space_model(v1, v2):
-    return np.dot(v1, v2) / (np.linalg.norm(v1) * np.linalg.norm(v2))
-
-
 @db_session
 def features_for_doc(tokens, doc):
     start_glob = time.time()
     start = time.time()
-    from search_backend.db.schemas import Document, DocumentPosition, Index
+    from search_backend.db.schemas import Document, DocumentPosition, Index, Title, TitlePosition, IndexTitle
     covered_query_term_number = 0
     sum_idf = 0
     tfs = []
     tfs_stream = []
     tf_idfs = []
     stream_length = doc.len
-    tfs_all_tokens_query = np.zeros(Index.select().count())
-    tfs_all_tokens_doc = np.zeros(Index.select().count())
+    v12 = 0
+    v1_2 = 0
+    v2_2 = 0
     zero_id = select(min(i.id) for i in Index)[:][0]
     doc_len = Document.select().count()
     end = time.time()
@@ -58,12 +57,14 @@ def features_for_doc(tokens, doc):
     for token in tokens:
         len_doc = len(Index.get(key=token).documents.filter(lambda doc_position: doc_position.document == doc))
         covered_query_term_number += len_doc > 0
-        tfs_all_tokens_query[Index.get(key=token).id - zero_id] = tf(len_doc)
+        tf_doc = tf(len_doc)
+        v12 += tf_doc
+        v1_2 += tf_doc * tf_doc
         current_idf = idf(doc_len, count(i.documents.document for i in Index if i.key == token))
         sum_idf += current_idf
-        tfs.append(tf(len_doc))
+        tfs.append(tf_doc)
         tfs_stream.append(len_doc / stream_length)
-        tf_idfs.append(current_idf * tf(len_doc))
+        tf_idfs.append(current_idf * tf_doc)
 
     end = time.time()
     # print('Time elapsed on normal features: ', (end - start))
@@ -86,15 +87,75 @@ def features_for_doc(tokens, doc):
     # print('Statistics and copying: ', (end - start))
 
     start = time.time()
-    v1 = np.array(tfs_all_tokens_query)
-    length_arr = select((dp.index, count(dp.position)) for dp in DocumentPosition if dp.document == doc)
-    for index in length_arr:
-        len_doc = index[1]
-        tfs_all_tokens_doc[index[0].id - zero_id] = tf(len_doc)
-    v2 = np.array(tfs_all_tokens_doc)
+    v2_2 = doc.vector
 
     features.append(1)  # Boolean model
-    features.append(vector_space_model(v1, v2))
+    features.append(v1_2 / (math.sqrt(v1_2) + math.sqrt(v2_2))) # Vector space model
+    db.merge_local_stats()
+    end = time.time()
+    # print('Time elapsed on vector space model: ', (end - start))
+
+    end = time.time()
+    # print('Building features: ', (end - start_glob))
+
+    # Features for title
+
+    doc = Title.get(location=doc.location)
+    covered_query_term_number = 0
+    sum_idf = 0
+    tfs = []
+    tfs_stream = []
+    tf_idfs = []
+    stream_length = doc.len
+    zero_id = select(min(i.id) for i in IndexTitle)[:][0]
+    doc_len = Title.select().count()
+    v12 = 0
+    v1_2 = 0
+    v2_2 = 0
+    end = time.time()
+    # print('Init locals: ', (end - start))
+
+    start = time.time()
+    for token in tokens:
+        try:
+            len_doc = len(IndexTitle.get(key=token).titles.filter(lambda doc_position: doc_position.title == doc))
+        except AttributeError:
+            len_doc = 0
+        covered_query_term_number += len_doc > 0
+        tf_doc = tf(len_doc)
+        v12 += tf_doc
+        v1_2 += tf_doc * tf_doc
+        current_idf = idf(doc_len, count(i.titles.title for i in IndexTitle if i.key == token))
+        sum_idf += current_idf
+        tfs.append(tf(len_doc))
+        tfs_stream.append(len_doc / stream_length)
+        tf_idfs.append(current_idf * tf_doc)
+
+    end = time.time()
+    # print('Time elapsed on normal features: ', (end - start))
+
+    start = time.time()
+    covered_query_term_ratio = covered_query_term_number / len(tokens)
+
+    if len(tokens) == 1:
+        features.extend([covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
+                    max(tfs), statistics.mean(tfs), 0, sum(tfs_stream), min(tfs_stream),
+                    max(tfs_stream), statistics.mean(tfs_stream), 0, sum(tf_idfs),
+                    min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), 0])
+    else:
+        features.extend([covered_query_term_number, covered_query_term_ratio, stream_length, sum_idf, sum(tfs), min(tfs),
+                    max(tfs), statistics.mean(tfs), statistics.variance(tfs), sum(tfs_stream), min(tfs_stream),
+                    max(tfs_stream), statistics.mean(tfs_stream), statistics.variance(tfs_stream), sum(tf_idfs),
+                    min(tf_idfs), max(tf_idfs), statistics.mean(tf_idfs), statistics.variance(tf_idfs)])
+
+    end = time.time()
+    # print('Statistics and copying: ', (end - start))
+
+    start = time.time()
+    v2_2 = doc.vector
+
+    features.append(int(covered_query_term_ratio == 1))  # Boolean model
+    features.append(v1_2 / (math.sqrt(v1_2) + math.sqrt(v2_2)))  # Vector space model
     db.merge_local_stats()
     end = time.time()
     # print('Time elapsed on vector space model: ', (end - start))
@@ -179,7 +240,7 @@ def predict_rank(tokens, k, v, model):
 
 class Search:
     def __init__(self):
-        self.stopwords = set(stopwords.words('english'))
+        self.stopwords = set(stopwordsi.words('english'))
         self.stemmer = EnglishStemmer()
 
     @db_session

@@ -75,9 +75,52 @@ def index_files():
                 num += 1
 
             document_instance.len = num
-            from pympler import summary, muppy
-            sum1 = summary.summarize(muppy.get_objects())
-            summary.print_(sum1)
+
+        if document_instance.vector is None:
+            length_arr = select((dp.index, count(dp.position)) for dp in DocumentPosition
+                                if dp.document == document_instance)
+            v2_2 = 0
+            for index in length_arr:
+                tf_doc = tf(index[1])
+                v2_2 += tf_doc * tf_doc
+            document_instance.vector = v2_2
+
+        # Title index
+        title_instance = Title.get(location=doc_path)
+        if title_instance is None:
+            title_instance = Title(location=doc_path)
+
+            for start, end in tokenizer.span_tokenize(doc_path):
+                token = doc_path[start:end].lower()
+                if token in stopwords:
+                    continue
+                token = stemmer.stem(token)
+                index_title_token = IndexTitle.get(key=token)
+                if index_title_token is None:
+                    index_title_token = IndexTitle(key=token)
+                title_position = TitlePosition(title=title_instance, position=start, index=index_title_token)
+        if title_instance.len is None:
+            num = 0
+            for start, end in tokenizer.span_tokenize(doc_path):
+                token = doc_path[start:end].lower()
+                if token in stopwords:
+                    continue
+                num += 1
+
+            title_instance.len = num
+
+        if title_instance.vector is None:
+            length_arr = select((dp.index, count(dp.position)) for dp in TitlePosition
+                                if dp.title == title_instance)
+            v2_2 = 0
+            for index in length_arr:
+                tf_doc = tf(index[1])
+                v2_2 += tf_doc * tf_doc
+            title_instance.vector = v2_2
+
+        # from pympler import summary, muppy
+        # sum1 = summary.summarize(muppy.get_objects())
+        # summary.print_(sum1)
 
 
         # query_stats = sorted(db.local_stats.values(),

@@ -25,7 +25,7 @@ def execute():
     #     data = load_svmlight_files(("../data/Fold1/train.txt", "../data/Fold1/test.txt"))
     #     return data
 
-    X, old_y = np.load('data7_only_whole_doc.npy')
+    X, old_y = np.load('data9_doc_title.npy')
     y = []
     for i in old_y:
         y.append(int(i))
@@ -45,7 +45,7 @@ def execute():
     # prepare models
 
     models = [
-               ('RandomForest90', RandomForestClassifier(n_estimators=90, criterion='entropy', random_state=seed)),
+               ('RandomForest90_doc_title', RandomForestClassifier(n_estimators=90, criterion='entropy', random_state=seed)),
             ]
 
     # evaluate each model in turn
