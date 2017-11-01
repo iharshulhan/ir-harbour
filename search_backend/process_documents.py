@@ -130,4 +130,5 @@ def index_files():
         commit()
 
 
-# index_files()
+if __name__ == '__main__':
+    index_files()
