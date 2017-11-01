@@ -1,6 +1,11 @@
 """This module indexes files"""
 import math
 import os
+import sys
+
+PACKAGE_PARENT = '..'
+SCRIPT_DIR = os.path.dirname(os.path.realpath(os.path.join(os.getcwd(), os.path.expanduser(__file__))))
+sys.path.append(os.path.normpath(os.path.join(SCRIPT_DIR, PACKAGE_PARENT)))
 
 from search_backend.db.schemas import *
 from nltk.tokenize import RegexpTokenizer
@@ -131,4 +136,12 @@ def index_files():
 
 
 if __name__ == '__main__':
+    import fcntl
+
+    f = open('lock', 'w')
+    try:
+        fcntl.lockf(f, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except:
+        sys.stderr.write('[%s] Script already running.\n' % time.strftime('%c'))
+        sys.exit(-1)
     index_files()
