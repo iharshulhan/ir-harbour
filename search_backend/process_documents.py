@@ -14,6 +14,7 @@ from nltk.corpus import stopwords
 import search_backend.text_rank as text_rank
 import bz2
 import xml.etree.ElementTree as ET
+import time
 
 tokenizer = RegexpTokenizer(r'\w+')
 stopwords = set(stopwords.words('english'))
