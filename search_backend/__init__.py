@@ -109,6 +109,9 @@ def features_for_doc(tokens, doc):
     # Features for title
 
     doc = Title.get(location=doc.location)
+    if doc is None:
+        features.extend(np.zeros(21))
+        return features
     covered_query_term_number = 0
     sum_idf = 0
     tfs = []
