@@ -90,7 +90,13 @@ def features_for_doc(tokens, doc):
     v2_2 = doc.vector
 
     features.append(1)  # Boolean model
-    features.append(v1_2 / (math.sqrt(v1_2) + math.sqrt(v2_2))) # Vector space model
+    if v1_2 > 0:
+        v1_2 = math.sqrt(v1_2)
+    if v2_2 > 0:
+        v2_2 = math.sqrt(v2_2)
+    if v2_2 + v1_2 == 0:
+        v1_2 = 1
+    features.append(v1_2 / v1_2 + v2_2)  # Vector space model
     db.merge_local_stats()
     end = time.time()
     # print('Time elapsed on vector space model: ', (end - start))
@@ -155,7 +161,13 @@ def features_for_doc(tokens, doc):
     v2_2 = doc.vector
 
     features.append(int(covered_query_term_ratio == 1))  # Boolean model
-    features.append(v1_2 / (math.sqrt(v1_2) + math.sqrt(v2_2)))  # Vector space model
+    if v1_2 > 0:
+        v1_2 = math.sqrt(v1_2)
+    if v2_2 > 0:
+        v2_2 = math.sqrt(v2_2)
+    if v2_2 + v1_2 == 0:
+        v1_2 = 1
+    features.append(v1_2 / v1_2 + v2_2)  # Vector space model
     db.merge_local_stats()
     end = time.time()
     # print('Time elapsed on vector space model: ', (end - start))
