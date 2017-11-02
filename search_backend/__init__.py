@@ -90,6 +90,8 @@ def features_for_doc(tokens, doc):
     v2_2 = doc.vector
 
     features.append(1)  # Boolean model
+    if v2_2 is None:
+        v2_2 = 0
     if v1_2 > 0:
         v1_2 = math.sqrt(v1_2)
     if v2_2 > 0:
@@ -161,6 +163,8 @@ def features_for_doc(tokens, doc):
     v2_2 = doc.vector
 
     features.append(int(covered_query_term_ratio == 1))  # Boolean model
+    if v2_2 is None:
+        v2_2 = 0
     if v1_2 > 0:
         v1_2 = math.sqrt(v1_2)
     if v2_2 > 0:
