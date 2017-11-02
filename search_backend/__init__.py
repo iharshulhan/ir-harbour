@@ -297,6 +297,8 @@ class Search:
         print('Time elapsed Query and: ', (end - start))
         len1 = len(docs)
         start = time.time()
+        if len1 == 0:
+            return []
         ranks = Parallel(n_jobs=min(1, len1))(
             delayed(predict_rank)(tokens, doc, model) for doc in docs)
         for rank in ranks:
