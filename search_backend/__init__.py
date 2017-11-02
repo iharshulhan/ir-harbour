@@ -106,7 +106,7 @@ def features_for_doc(tokens, doc):
     tfs = []
     tfs_stream = []
     tf_idfs = []
-    stream_length = doc.len
+    stream_length = max(doc.len, 1)
     zero_id = select(min(i.id) for i in IndexTitle)[:][0]
     doc_len = Title.select().count()
     v12 = 0
@@ -223,19 +223,18 @@ def find_exact_phrase(doc, tokens, distance, Index, result_docs_position, model,
 
 
 @db_session
-def predict_rank(tokens, k, v, model):
+def predict_rank(tokens, doc, model):
     from search_backend.db.schemas import Document
-    if v == len(tokens):
-        document = Document.get(id=k)
-        start = time.time()
-        features = features_for_doc(tokens, document)
-        end = time.time()
-        print('Build features', (end - start))
-        start = time.time()
-        prob = model.predict_proba([features])
-        end = time.time()
-        print('Model predict: ', (end - start))
-        return k, prob[0][1]
+    document = doc
+    start = time.time()
+    features = features_for_doc(tokens, document)
+    end = time.time()
+    # print('Build features', (end - start))
+    start = time.time()
+    prob = model.predict_proba([features])
+    end = time.time()
+    # print('Model predict: ', (end - start))
+    return doc, prob[0][1]
 
 
 class Search:
@@ -265,15 +264,19 @@ class Search:
         docs = self.query_and(tokens)
         end = time.time()
         print('Time elapsed: ', (end - start))
+        num = 0
         if len(docs) > 0:
             for key, value in sorted(docs.items(), key=lambda kv: (-kv[1], kv[0])):
-                document = Document.get(id=key)
+                num += 1
+                if num >= 10:
+                    break
+                document = key
                 summary = document.snippet
                 result_list.append({
                     'title': document.location,
                     'snippet':  # open(document.location).read()[positions[key]:positions[key] + 150] +
                         '<br\><h3>Summary</h3>' + summary,
-                    'href': 'http://www.example.com'
+                    'href': 'https://en.wikipedia.org/wiki/' + document.location
                 })
         else:
             result_list.append({
@@ -287,28 +290,15 @@ class Search:
     @db_session
     def query_and(self, tokens):
         start = time.time()
-        docs = defaultdict(int)
-        docs_num = defaultdict(int)
-        result_docs = defaultdict(int)
-        min_token = select((i.key, count(i.documents)) for i in Index
-                           if i.key in tokens).order_by(2)[:][0][0]
-
-        for doc in Index.get(key=min_token).documents:
-            docs[doc.document.id] = 0
-        for token in tokens:
-            len1 = len(docs)
-            lens = Parallel(n_jobs=min(1, len1))(
-                delayed(check_doc)(token, doc) for doc in docs)
-            for x in lens:
-                if x[1] > 0:
-                    docs[x[0]] = docs[x[0]] + 1
-                    docs_num[x[0]] = docs_num[x[0]] + int(x[1])
+        result_docs = defaultdict(float)
+        docs = select(dp.document for dp in DocumentPosition if dp.index in select(i for i in Index if i.key in tokens) and
+                      count((dp.index, dp.document)) >= len(tokens))[:]
         end = time.time()
         print('Time elapsed Query and: ', (end - start))
         len1 = len(docs)
         start = time.time()
         ranks = Parallel(n_jobs=min(1, len1))(
-            delayed(predict_rank)(tokens, k, v, model) for (k, v) in docs.items())
+            delayed(predict_rank)(tokens, doc, model) for doc in docs)
         for rank in ranks:
             if rank is not None:
                 result_docs[rank[0]] = rank[1]
